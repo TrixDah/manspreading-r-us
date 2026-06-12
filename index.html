@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mentone Manspreaders</title>
+</head>
+<body>
+  <h1>Waiting For Response</h1>
+  <div id="output">Loading...</div>
+
+  <script>
+    fetch("https:api.mentonemanspreaders.com")
+      .then(r => r.text())
+      .then(text => {
+        document.getElementById("output").innerText = text;
+      })
+      .catch(err => {
+        document.getElementById("output").innerText = "Error: " + err;
+      });
+  </script>
+</body>
+</html>
+
