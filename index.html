@@ -1,26 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Mentone Manspreaders</title>
-</head>
-<body>
-  <h1>Mentone Manspreaders</h1>
-  <h2>Server Response</h2>
-  <div id="output">Loading...</div>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* left-right center */
+    align-items: center;     /* top-bottom center */
+}
 
-  <script>
-    fetch("https://api.mentonemanspreaders.com")
-    .then(r => {
-        if (!r.ok) throw new Error("Network response was not ok " + r.status);
-        return r.text();
-      })
-      .then(text => {
-        document.getElementById("output").innerText = text;
-      })
-      .catch(err => {
-        document.getElementById("output").innerText = "Error: " + err.message;
-      });
-  </script>
+.box {
+    padding: 20px;
+    background: lightblue;
+}
+</style>
+</head>
+<title>Mentone Manspreaders</title>
+<body>
+      <label>Enter your username:</label>
+      <input type="text">
+      <label>Enter your password:</label>
+      <input type="text">
+      <button>Log In</button>
 </body>
 </html>
-
