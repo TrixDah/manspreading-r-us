@@ -220,6 +220,71 @@
       outline-offset: 4px;
       border-radius: 2px;
     }
+    .front-page-feature-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(245px, 0.38fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .front-page-feature-layout > * { min-width: 0; }
+
+    .front-page-side-story {
+      padding: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--accent);
+    }
+
+    .front-page-side-story .story-image {
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      margin-bottom: 14px;
+    }
+
+    .front-page-side-story .story-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .front-page-side-story .story-category {
+      margin: 0 0 7px;
+      color: var(--accent);
+      font: 800 0.72rem/1.4 Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .front-page-side-story h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+    }
+
+    .front-page-side-story .story-summary {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .front-page-side-story .story-meta {
+      margin: 0;
+      color: var(--muted);
+      font: 0.75rem/1.5 Arial, sans-serif;
+    }
+
+    @media (max-width: 760px) {
+      .front-page-feature-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
 
     .lead-story p, .side-story p, .article-card p {
       margin: 0;
@@ -463,32 +528,72 @@
     <p class="section-label" id="front-page">The Front Page</p>
 
     <section class="lead-grid" aria-label="Featured stories">
-      <article class="lead-story">
-        <div class="lead-image">
-          <img src="images/costofliving.jpg" alt="Cost of living and rising canteen prices">
-        </div>
+      <div class="front-page-feature-layout">
 
-        <div class="story-content">
-          <span class="category">Budget News</span>
+        <!-- Main featured story -->
+        <article class="lead-story">
+          <div class="lead-image">
+            <img
+              src="images/costofliving.jpg"
+              alt="Cost of living and rising canteen prices"
+            >
+          </div>
+
+          <div class="story-content">
+            <span class="category">Budget News</span>
+
+            <h2>
+              <a class="headline-link" href="articles/robotdog.html">
+                Canteen Prices Rise as IT Department Buys New Robot Dog
+              </a>
+            </h2>
+
+            <p>
+              $5 Lipton Iced Teas are the new norm as the school acquires
+              a mechanical toy hound, prompting concerns about the school's
+              financial priorities.
+            </p>
+
+            <span class="byline">
+              By Anonymous eLeader Insider · 15 October 2026
+            </span>
+          </div>
+        </article>
+
+        <!-- Smaller side story: air-conditioning failure -->
+        <article class="front-page-side-story">
+          <a
+            class="story-image"
+            href="articles/boiling.html"
+            aria-label="Read the story about the school air-conditioning failure"
+          >
+            <img
+              src="images/boiling.jpg"
+              alt="School learning enviroments and facilities."
+            >
+          </a>
+
+          <p class="story-category">School News · Exclusive</p>
 
           <h2>
-            <a class="headline-link" href="articles/robotdog.html">
-              Canteen Prices Rise as IT Department Buys New Robot Dog
+            <a class="headline-link" href="articles/boiling.html">
+              Unfortunate Student Evaporates as School Air Conditioning Fails to Deliver Once Again
             </a>
           </h2>
 
-          <p>
-            $5 Lipton Iced Teas are the new norm as the school acquires
-            a mechanical toy hound, prompting concerns about the school's
-            financial priorities.
+          <p class="story-summary">
+            A poor boy has turned into water vapour after 
+            overheating due to class air conditioning failing to work.
           </p>
 
-          <span class="byline">
-            By Anonymous eLeader Insider · 15 October 2026
-          </span>
-        </div>
-      </article>
+          <p class="story-meta">
+            By Staff Reporter · 23 October 2026
+          </p>
+        </article>
+
+      </div>
     </section>
+
 
     <section id="local">
       <p class="section-label">Latest Stories</p>
@@ -565,7 +670,7 @@
             </p>
 
             <span class="byline">
-              By Lead Columnist · 17 October
+              By Lead Columnist · 17 October 2026
             </span>
           </div>
         </article>
