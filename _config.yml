@@ -1,0 +1,28 @@
+title: Mentone Manspreaders
+tagline: Knowledge That Spreads
+url: https://mentonemanspreaders.com
+timezone: Australia/Melbourne
+markdown: kramdown
+
+# How many stories appear under "Latest Stories" on the front page
+latest_count: 6
+
+collections:
+  articles:
+    output: true
+    # Keeps existing links working: /articles/robotdog.html etc.
+    permalink: /articles/:name.html
+
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article
+
+# Files Jekyll should not copy into the published site
+exclude:
+  - tools
+  - README.md
+  - Gemfile
+  - Gemfile.lock

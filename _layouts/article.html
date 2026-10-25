@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<main>
+  <p class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    &nbsp; / &nbsp;
+    <a href="{{ '/' | relative_url }}#local">Latest Stories</a>
+    &nbsp; / &nbsp;
+    {{ page.section }}
+  </p>
+
+  <article class="article">
+    <header class="article-header">
+      <span class="category">{{ page.section }}{% if page.exclusive %} &middot; Exclusive{% endif %}</span>
+
+      <h1 class="article-title">{{ page.title }}</h1>
+
+      {% if page.standfirst %}
+      <p class="standfirst">{{ page.standfirst }}</p>
+      {% endif %}
+
+      <div class="article-byline">
+        {% if page.author %}<span>By {{ page.author }}</span>{% endif %}
+        <span>{{ page.date | date: "%-d %B %Y" }}</span>
+        {% if page.read_time %}<span>{{ page.read_time }}</span>{% endif %}
+      </div>
+    </header>
+
+    {% if page.image %}
+    <figure style="margin: 0;">
+      <div class="hero-image">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+      </div>
+      {% if page.image_caption %}
+      <figcaption class="image-caption">{{ page.image_caption }}</figcaption>
+      {% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="article-body">
+      {{ content }}
+
+      <div class="article-end">
+        <p><strong>Article ends here.</strong></p>
+        <a class="back-link" href="{{ '/' | relative_url }}">&larr; Back to the front page</a>
+      </div>
+    </div>
+  </article>
+
+  {% comment %}
+    More Stories: other articles from the same category first (newest first),
+    then the newest from other categories, up to 3 in total.
+  {% endcomment %}
+  {% assign others = site.articles | where_exp: "a", "a.url != page.url" | sort: "date" | reverse %}
+  {% assign same = others | where: "section", page.section %}
+  {% assign different = others | where_exp: "a", "a.section != page.section" %}
+  {% assign related = same | concat: different %}
+
+  {% if related.size > 0 %}
+  <section class="related" aria-labelledby="related-heading">
+    <h2 class="section-label" id="related-heading">More Stories</h2>
+
+    <div class="related-grid">
+      {% for a in related limit: 3 %}
+      <article class="related-card">
+        <span class="category">{{ a.section }}</span>
+        <h3><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
+        <p>{{ a.summary }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</main>

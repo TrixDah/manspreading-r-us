@@ -1,0 +1,104 @@
+# Pages CMS configuration (https://pagescms.org)
+# Tells the editor which fields an article has. Field names must match
+# the front matter used by _layouts/article.html and index.html.
+
+media:
+  input: images
+  output: /images
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: _articles
+    view:
+      fields: [title, section, date, front_page]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Headline
+        type: string
+        required: true
+
+      - name: section
+        label: Category
+        type: select
+        required: true
+        options:
+          # To add a category, add a line here.
+          values:
+            - Budget News
+            - School News
+            - School Events
+            - Announcement
+
+      - name: exclusive
+        label: Mark as Exclusive
+        type: boolean
+
+      - name: front_page
+        label: Front page position
+        description: >
+          Lead = big story at the top. Side = small story beside it.
+          If several stories are set to the same position, the newest one wins,
+          so there is no need to un-set the old one.
+        type: select
+        options:
+          values:
+            - value: none
+              label: Not featured
+            - value: lead
+              label: Lead story (big)
+            - value: side
+              label: Side story (small)
+
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+
+      - name: author
+        label: Byline
+        description: 'Shown as "By ...". e.g. Staff Reporter, Lead Columnist'
+        type: string
+        required: true
+
+      - name: summary
+        label: Summary (front page and "More Stories" blurb)
+        description: One or two sentences.
+        type: text
+        required: true
+
+      - name: standfirst
+        label: Standfirst (intro line under the headline on the article page)
+        type: text
+
+      - name: read_time
+        label: Read time
+        description: 'e.g. 3 min read (optional)'
+        type: string
+
+      - name: image
+        label: Main image
+        type: image
+        required: true
+
+      - name: image_alt
+        label: Image description (for screen readers)
+        type: string
+
+      - name: image_caption
+        label: Image caption (optional)
+        type: string
+
+      - name: image_fit
+        label: Shift image crop down (for photos where the subject is low in the frame)
+        type: boolean
+
+      - name: body
+        label: Story
+        type: rich-text
