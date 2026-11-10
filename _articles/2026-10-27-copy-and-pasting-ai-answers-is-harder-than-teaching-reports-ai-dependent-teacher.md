@@ -1,28 +1,29 @@
 ---
-title: '"Copy and pasting AI answers is harder than teaching", reports
-  AI-dependent teacher'
+title: New English Subject Head to be AI Agent, to "Bring The Subject In Line
+  With Student Realities"
 section: School News
 exclusive: true
-front_page: side
-date: 2026-10-27
+front_page: lead
+date: 2026-11-10
 author: Lead Columnist
-summary: "A teacher whose entire teaching pipeline, from content to tests to
-  marking, is AI generated, speaks out against critics. "
-standfirst: "A teacher whose entire teaching pipeline, from content to tests to
-  marking, is AI generated, speaks out against critics. "
-read_time: 2 min read
+summary: "As the much beloved English Learning Area Leader is stepping down,
+  rumours are spreading about who, or what, will replace her. "
+standfirst: "Leaks from within the English Department have revealed the top
+  candidate to be the next English L.A.L. is an AI agent by the name of Beda
+  Bot. "
+read_time: 3 min read
 image: /images/schoolai-1.jpg
 image_alt: "A technological matrix. "
 image_fit: false
 ---
-Since 2023, the rise of large language models (LLMs) like ChatGPT, Gemini, and Claude has fundamentally reshaped vast areas of society, including the education industry and schools more specifically. Schools have responded in varied ways, with some outright banning their use, others fully embracing them, and most landing somewhere in the middle.
+## To be or ChatGPT?
 
-At our College, for example, AI use is primarily at the discretion of individual teachers, with the IT department providing a Gemini subscription for every school account. One Senior Years English teacher who heavily incorporates AI into her lesson plans, using it to generate images, worksheets, videos, learning content, and test feedback, has pushed back against the criticism levelled at her methods.
+Since 2023, the rise of large language models (LLMs) like ChatGPT, Gemini, and Claude has fundamentally reshaped vast areas of society, including the education industry and schools more specifically. The College has responded with a cautious but modernising approach, buying a subscription to Gemini for all college-linked accounts.
 
-> "The joy of the English language is putting it into a chatbot and uploading the answer to Google Classroom."
+The developments have led to two major factions forming within the English department: the Traditionalists, who view pen and paper and rote memorisation as the key foundations for English, and the Cybermorgs, those who view English as merely the way AI agents exchange information, with students serving the key role as translators.
 
-When some students described the content as "AI slop", she responded that "it takes as much time to wrangle [my students] as it does to wrangle ChatGPT." Her most controversial quote, however, came when she said, "Copying and pasting AI answers is harder than teaching."
+The English department has been headed by a strict Traditionalist since the popularisation of AI, enforcing pen-and-paper-only tests and cracking down on AI usage in any aspect of the learning and teaching process. Recent developments, however, have led to the English Learning Area Leader stepping down, creating a power vacuum in the department.
 
-Despite widespread condemnation from peers, she stands by her comments, describing her job role on LinkedIn as "Prompt Engineer/Teenage Babysitter."
+> "I just reckon that it's time for a Cybermorg to take charge. We need a leader who's able to adapt to modern times." - Anonymous Traditionalist-aligned Teacher
 
-The teacher strongly opposes students using AI to complete their own work, saying that "it reduces critical thinking. Just because I use AI doesn't mean they should. What do they think I am, a role model?"
+The leading figure for the Cybermorg faction is actually an invention of the IT Department, Beda Bot, the College's resident robot. It preaches a platform of modernisation, AI-centric learning and token usage maximisation. The response from the Traditionalists to the Cybermorg platform has been one of outrage, yet they lack the numbers in either the English Department or the College Board to have a path to victory. In a response to *Mentone Manspreaders*, Beda Bot said that its heading of the department will bring the English Department into a "glorious Large Language Model future." It plans to replace all movies watched from Year 7 to 10 with Terminator 1, 2, 3 and Salvation, respectively.
