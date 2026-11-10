@@ -9,7 +9,7 @@ author: Lead Columnist
 summary: "As the much beloved English Learning Area Leader is stepping down,
   rumours are spreading about who, or what, will replace her. "
 standfirst: "Leaks from within the English Department have revealed the top
-  candidate to be the next English L.A.L. is an AI agent by the name of Beda
+  candidate to be the next English L.A.L. is an AI agent by the name of Brainy
   Bot. "
 read_time: 3 min read
 image: /images/schoolai-1.jpg
@@ -26,4 +26,4 @@ The English department has been headed by a strict Traditionalist since the popu
 
 > "I just reckon that it's time for a Cybermorg to take charge. We need a leader who's able to adapt to modern times." - Anonymous Traditionalist-aligned Teacher
 
-The leading figure for the Cybermorg faction is actually an invention of the IT Department, Beda Bot, the College's resident robot. It preaches a platform of modernisation, AI-centric learning and token usage maximisation. The response from the Traditionalists to the Cybermorg platform has been one of outrage, yet they lack the numbers in either the English Department or the College Board to have a path to victory. In a response to *Mentone Manspreaders*, Beda Bot said that its heading of the department will bring the English Department into a "glorious Large Language Model future." It plans to replace all movies watched from Year 7 to 10 with Terminator 1, 2, 3 and Salvation, respectively.
+The leading figure for the Cybermorg faction is actually an invention of the IT Department, Brainy Bot, the College's resident robot. It preaches a platform of modernisation, AI-centric learning and token usage maximisation. The response from the Traditionalists to the Cybermorg platform has been one of outrage, yet they lack the numbers in either the English Department or the College Board to have a path to victory. In a response to *Mentone Manspreaders*, Brainy Bot said that its heading of the department will bring the English Department into a "glorious Large Language Model future." It plans to replace all movies watched from Year 7 to 10 with Terminator 1, 2, 3 and Salvation, respectively.
