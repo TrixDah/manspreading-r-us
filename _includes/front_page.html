@@ -1,0 +1,18 @@
+{% comment %}
+  Splits the articles into:
+    lead    - newest article with front_page: lead
+    sides   - the two newest with front_page: side
+    latest  - the next N newest (N = latest_count in _config.yml, default 6)
+    archive - everything older than that
+  Sets: all, lead, sides, latest, archive
+{% endcomment %}
+{% assign n = site.latest_count | default: 6 %}
+{% assign all = site.articles | sort: "date" | reverse %}
+{% assign lead = all | where: "front_page", "lead" | first %}
+{% assign sides = all | where: "front_page", "side" | slice: 0, 2 %}
+{% assign top_urls = sides | map: "url" %}
+{% if lead %}{% assign top_urls = top_urls | push: lead.url %}{% endif %}
+{% assign rest = "" | split: "" %}
+{% for a in all %}{% unless top_urls contains a.url %}{% assign rest = rest | push: a %}{% endunless %}{% endfor %}
+{% assign latest = rest | slice: 0, n %}
+{% assign archive = rest | slice: n, 10000 %}

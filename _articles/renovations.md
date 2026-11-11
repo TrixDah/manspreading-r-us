@@ -1,7 +1,7 @@
 ---
 title: "New School Bathrooms Projected to Last a Record 42 Minutes Before Being Vandalised, Says Principal"
 section: "School News"
-front_page: none
+front_page: side
 date: 2026-10-20
 author: "Lead Columnist"
 read_time: "3 min read"

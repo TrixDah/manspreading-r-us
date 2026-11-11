@@ -5,7 +5,7 @@ layout: default
   <p class="breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a>
     &nbsp; / &nbsp;
-    <a href="{{ '/' | relative_url }}#local">Latest Stories</a>
+    <a href="{{ '/archive.html' | relative_url }}">Archive</a>
     &nbsp; / &nbsp;
     {{ page.section }}
   </p>
@@ -49,20 +49,16 @@ layout: default
   </article>
 
   {% comment %}
-    More Stories: other articles from the same category first (newest first),
-    then the newest from other categories, up to 3 in total.
+    More Stories: 3 random other articles (any category, archive included).
+    The newest 3 are rendered here as a fallback; stories.js swaps in random ones in the browser.
   {% endcomment %}
   {% assign others = site.articles | where_exp: "a", "a.url != page.url" | sort: "date" | reverse %}
-  {% assign same = others | where: "section", page.section %}
-  {% assign different = others | where_exp: "a", "a.section != page.section" %}
-  {% assign related = same | concat: different %}
-
-  {% if related.size > 0 %}
+  {% if others.size > 0 %}
   <section class="related" aria-labelledby="related-heading">
     <h2 class="section-label" id="related-heading">More Stories</h2>
 
-    <div class="related-grid">
-      {% for a in related limit: 3 %}
+    <div class="related-grid" id="more-stories" data-feed="{{ '/articles.json' | relative_url }}" data-current="{{ page.url | relative_url }}">
+      {% for a in others limit: 3 %}
       <article class="related-card">
         <span class="category">{{ a.section }}</span>
         <h3><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
@@ -71,5 +67,6 @@ layout: default
       {% endfor %}
     </div>
   </section>
+  <script src="{{ '/stories.js' | relative_url }}"></script>
   {% endif %}
 </main>

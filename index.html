@@ -1,84 +1,46 @@
 ---
 layout: default
 ---
-{% comment %}
-  The front page builds itself from the articles:
-    - Lead story  = newest article whose "Front page position" is Lead
-    - Side story  = newest article whose "Front page position" is Side
-    - Latest      = everything else, newest first
-{% endcomment %}
-{% assign all = site.articles | sort: "date" | reverse %}
-{% assign lead = all | where: "front_page", "lead" | first %}
-{% assign side = all | where: "front_page", "side" | first %}
+{% include front_page.html %}
 
 <main>
   <p class="section-label" id="front-page">The Front Page</p>
 
-  <section class="lead-grid" aria-label="Featured stories">
-    <div class="front-page-feature-layout">
+  <section class="top-grid top-grid--{{ sides.size }}" aria-label="Top stories">
+    {% if lead %}
+    <article class="top-card top-lead">
+      <a class="top-img" href="{{ lead.url | relative_url }}" style="--bg: url('{{ lead.image | relative_url }}')" tabindex="-1" aria-hidden="true">
+        <img{% if lead.image_fit %} class="fit-image"{% endif %} src="{{ lead.image | relative_url }}" alt="{{ lead.image_alt | default: lead.title | escape }}">
+      </a>
+      <div class="top-body">
+        <span class="top-kicker">{{ lead.section }}{% if lead.exclusive %} &middot; Exclusive{% endif %}</span>
+        <h2><a class="headline-link" href="{{ lead.url | relative_url }}">{{ lead.title }}</a></h2>
+        <p>{{ lead.summary }}</p>
+        <span class="top-meta">By {{ lead.author }} &middot; {{ lead.date | date: "%-d %B %Y" }}</span>
+      </div>
+    </article>
+    {% endif %}
 
-      {% if lead %}
-      <article class="lead-story">
-        <div class="lead-image">
-          <img src="{{ lead.image | relative_url }}" alt="{{ lead.image_alt | default: lead.title | escape }}">
-        </div>
-        <div class="story-content">
-          <span class="category">{{ lead.section }}{% if lead.exclusive %} &middot; Exclusive{% endif %}</span>
-          <h2><a class="headline-link" href="{{ lead.url | relative_url }}">{{ lead.title }}</a></h2>
-          <p>{{ lead.summary }}</p>
-          <span class="byline">By {{ lead.author }} &middot; {{ lead.date | date: "%-d %B %Y" }}</span>
-        </div>
-      </article>
-      {% endif %}
-
-      {% if side %}
-      <div class="front-page-side-column">
-<article class="front-page-side-story">
-        <a class="side-image" href="{{ side.url | relative_url }}" aria-label="Read the story: {{ side.title | escape }}">
-          <img src="{{ side.image | relative_url }}" alt="{{ side.image_alt | default: side.title | escape }}">
-        </a>
-        <p class="story-category">{{ side.section }}{% if side.exclusive %} &middot; Exclusive{% endif %}</p>
+    {% for side in sides %}
+    <article class="top-card top-side">
+      <a class="top-img" href="{{ side.url | relative_url }}" style="--bg: url('{{ side.image | relative_url }}')" tabindex="-1" aria-hidden="true">
+        <img{% if side.image_fit %} class="fit-image"{% endif %} src="{{ side.image | relative_url }}" alt="{{ side.image_alt | default: side.title | escape }}">
+      </a>
+      <div class="top-body">
+        <span class="top-kicker">{{ side.section }}{% if side.exclusive %} &middot; Exclusive{% endif %}</span>
         <h2><a class="headline-link" href="{{ side.url | relative_url }}">{{ side.title }}</a></h2>
-        <p class="story-summary">{{ side.summary }}</p>
-        <p class="story-meta">By {{ side.author }} &middot; {{ side.date | date: "%-d %B %Y" }}</p>
-      </article>
-
-<article class="front-page-side-story">
-<a class="story-image" href="articles/renovations.html" aria-label="Read the story about the school bathroom renovations">
-<img class="fit-image" src="images/bathroom.jpg" alt="New school bathroom renovations">
-</a>
-<p class="story-category">School News</p>
-<h2><a class="headline-link" href="articles/renovations.html">New School Bathrooms Projected to Last a Record 42 Minutes Before Being Vandalised, Says Principal</a></h2>
-<p class="story-summary">The school's record $1.95 million bathroom renovations are said to have the best anti-vandalism protections possible.</p>
-<p class="story-meta">By Lead Columnist &middot; 20 October 2026</p>
-</article>
-</div>
-      {% endif %}
-
-    </div>
+        <p>{{ side.summary }}</p>
+        <span class="top-meta">By {{ side.author }} &middot; {{ side.date | date: "%-d %B %Y" }}</span>
+      </div>
+    </article>
+    {% endfor %}
   </section>
 
   <section id="local">
-    <p class="section-label">More Stories</p>
-
-    <div class="latest-grid" id="random-stories">
-      {% assign shown = 0 %}
-      {% for a in all %}
-        {% if a.url == lead.url or a.url == side.url %}{% continue %}{% endif %}
-        {% if shown >= site.latest_count %}{% break %}{% endif %}
-        {% assign shown = shown | plus: 1 %}
-      <article class="article-card">
-        <div class="story-image">
-          <img{% if a.image_fit %} class="fit-image"{% endif %} src="{{ a.image | relative_url }}" alt="{{ a.image_alt | default: a.title | escape }}" loading="lazy">
-        </div>
-        <div class="story-content">
-          <span class="category">{{ a.section }}{% if a.exclusive %} &middot; Exclusive{% endif %}</span>
-          <h3><a class="headline-link" href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
-          <p>{{ a.summary }}</p>
-          <span class="byline">By {{ a.author }} &middot; {{ a.date | date: "%-d %B %Y" }}</span>
-        </div>
-      </article>
-      {% endfor %}
+    <p class="section-label">Latest Stories</p>
+    <div class="latest-grid">
+      {% for a in latest %}{% include story_card.html a=a %}{% endfor %}
     </div>
+    <p class="archive-more"><a class="headline-link" href="{{ '/archive.html' | relative_url }}">Browse the archive &rarr;</a></p>
   </section>
 </main>

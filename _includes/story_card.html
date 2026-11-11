@@ -1,0 +1,12 @@
+{% assign a = include.a %}
+<article class="article-card">
+  <div class="story-image">
+    <img{% if a.image_fit %} class="fit-image"{% endif %} src="{{ a.image | relative_url }}" alt="{{ a.image_alt | default: a.title | escape }}" loading="lazy">
+  </div>
+  <div class="story-content">
+    <span class="category">{{ a.section }}{% if a.exclusive %} &middot; Exclusive{% endif %}</span>
+    <h3><a class="headline-link" href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
+    <p>{{ a.summary }}</p>
+    <span class="byline">By {{ a.author }} &middot; {{ a.date | date: "%-d %B %Y" }}</span>
+  </div>
+</article>
