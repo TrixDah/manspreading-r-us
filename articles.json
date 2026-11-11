@@ -1,0 +1,64 @@
+{
+  "articles": [
+    {
+      "headline": "Canteen Prices Rise as IT Department Buys New Robot Dog",
+      "url": "articles/robotdog.html",
+      "category": "Budget News",
+      "summary": "$5 Lipton Iced Teas are the new norm as the school acquires a mechanical toy hound, prompting concerns about the school's financial priorities.",
+      "author": "Anonymous eLeader Insider",
+      "date": "2026-10-15",
+      "image": "images/costofliving.jpg",
+      "image_alt": "Cost of living and rising canteen prices",
+      "fit_image": false,
+      "featured": true
+    },
+    {
+      "headline": "Unfortunate Student Evaporates as School Air Conditioning Fails to Deliver Once Again",
+      "url": "articles/boiling.html",
+      "category": "School News · Exclusive",
+      "summary": "A poor boy has turned into water vapour after overheating due to class air conditioning failing to work.",
+      "author": "Staff Reporter",
+      "date": "2026-10-23",
+      "image": "images/boiling.jpg",
+      "image_alt": "School learning environments and facilities.",
+      "fit_image": false,
+      "featured": true
+    },
+    {
+      "headline": "New School Bathrooms Projected to Last a Record 42 Minutes Before Being Vandalised, Says Principal",
+      "url": "articles/renovations.html",
+      "category": "School News",
+      "summary": "The school's record $1.95 million bathroom renovations are said to have the best anti-vandalism protections possible.",
+      "author": "Lead Columnist",
+      "date": "2026-10-20",
+      "image": "images/bathroom.jpg",
+      "image_alt": "New school bathroom renovations",
+      "fit_image": true,
+      "featured": true
+    },
+    {
+      "headline": "College Committed to Net-Zero Free Snacks on MAD Day by 2030",
+      "url": "articles/madday.html",
+      "category": "School Events",
+      "summary": "Following years of declining food and beverage quality on MAD Day, the College has officially announced its plan to end all free food during the event by 2030.",
+      "author": "Staff Writer",
+      "date": "2026-10-01",
+      "image": "images/madday.jpg",
+      "image_alt": "MAD Day at the College",
+      "fit_image": false,
+      "featured": false
+    },
+    {
+      "headline": "Sibling School Plans to Reduce Class Size by Continuing to Deliver Substandard Education.",
+      "url": "articles/classsize.html",
+      "category": "Announcement",
+      "summary": "The eventual plan is to have no students so teachers can be paid to do nothing.",
+      "author": "Lead Columnist",
+      "date": "2026-10-17",
+      "image": "images/school.jpg",
+      "image_alt": "Is lower educational investment a route to lower class sizes?",
+      "fit_image": false,
+      "featured": false
+    }
+  ]
+}

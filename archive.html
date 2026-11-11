@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% comment %}
+  The front page builds itself from the articles:
+    - Lead story  = newest article whose "Front page position" is Lead
+    - Side story  = newest article whose "Front page position" is Side
+    - Latest      = everything else, newest first
+{% endcomment %}
+{% assign all = site.articles | sort: "date" | reverse %}
+{% assign lead = all | where: "front_page", "lead" | first %}
+{% assign side = all | where: "front_page", "side" | first %}
+
+<main>
+<p class="section-label">The Archive</p>
+<p class="archive-intro">Every story that isn't currently on the front page, newest first.</p>
+<div class="latest-grid" id="archive-grid"><p class="archive-note">Loading stories&hellip;</p></div>
+<noscript><p class="archive-note">The archive needs JavaScript to load.</p></noscript>
+</main>

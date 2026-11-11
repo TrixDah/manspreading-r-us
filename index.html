@@ -32,7 +32,8 @@ layout: default
       {% endif %}
 
       {% if side %}
-      <article class="front-page-side-story">
+      <div class="front-page-side-column">
+<article class="front-page-side-story">
         <a class="side-image" href="{{ side.url | relative_url }}" aria-label="Read the story: {{ side.title | escape }}">
           <img src="{{ side.image | relative_url }}" alt="{{ side.image_alt | default: side.title | escape }}">
         </a>
@@ -41,15 +42,26 @@ layout: default
         <p class="story-summary">{{ side.summary }}</p>
         <p class="story-meta">By {{ side.author }} &middot; {{ side.date | date: "%-d %B %Y" }}</p>
       </article>
+
+<article class="front-page-side-story">
+<a class="story-image" href="articles/renovations.html" aria-label="Read the story about the school bathroom renovations">
+<img class="fit-image" src="images/bathroom.jpg" alt="New school bathroom renovations">
+</a>
+<p class="story-category">School News</p>
+<h2><a class="headline-link" href="articles/renovations.html">New School Bathrooms Projected to Last a Record 42 Minutes Before Being Vandalised, Says Principal</a></h2>
+<p class="story-summary">The school's record $1.95 million bathroom renovations are said to have the best anti-vandalism protections possible.</p>
+<p class="story-meta">By Lead Columnist &middot; 20 October 2026</p>
+</article>
+</div>
       {% endif %}
 
     </div>
   </section>
 
   <section id="local">
-    <p class="section-label">Latest Stories</p>
+    <p class="section-label">More Stories</p>
 
-    <div class="latest-grid">
+    <div class="latest-grid" id="random-stories">
       {% assign shown = 0 %}
       {% for a in all %}
         {% if a.url == lead.url or a.url == side.url %}{% continue %}{% endif %}

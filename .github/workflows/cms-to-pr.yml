@@ -1,0 +1,30 @@
+# Anyone editing through Pages CMS works on the "cms-drafts" branch.
+# Every push there from someone other than TrixDah opens (or updates) a PR into main.
+# main's ruleset requires TrixDah's approval, and he can push edits to the PR branch before merging.
+name: CMS draft → pull request
+
+on:
+  push:
+    branches: [cms-drafts]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  open-pr:
+    if: github.actor != 'TrixDah'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open PR if none exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          existing=$(gh pr list --head cms-drafts --base main --state open --json number --jq 'length')
+          if [ "$existing" = "0" ]; then
+            gh pr create --head cms-drafts --base main \
+              --title "CMS edits from ${{ github.actor }}" \
+              --body "Edited via Pages CMS. Needs @TrixDah's approval before merging." \
+              --reviewer TrixDah
+          fi
