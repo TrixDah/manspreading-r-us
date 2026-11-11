@@ -2,7 +2,7 @@
 title: Yellow House Assembly Put Off to Pay Respects to James Gunn's DCU
 section: School News
 exclusive: false
-front_page: lead
+front_page: none
 date: 2026-11-11
 author: Reginald "Rockin" Roberts
 summary: Yellow house's scheduled weekly assembly took a back seat as
