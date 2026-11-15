@@ -24,7 +24,7 @@ The developments have led to two major factions forming within the English depar
 
 The English department has been headed by a strict Traditionalist since the popularisation of AI, enforcing pen-and-paper-only tests and cracking down on AI usage in any aspect of the learning and teaching process. Recent developments, however, have led to the English Learning Area Leader stepping down, creating a power vacuum in the department.
 
-> "I just reckon that it's time for a Cybermorg to take charge. We need a leader who's able to adapt to modern times." - Anonymous Traditionalist-aligned Teacher
+> "I usually vote Traditionalist, but I just reckon that it's time for a Cybermorg to take charge. We need a leader who's able to adapt to modern times." - Anonymous English Teacher
 
 The leading figure for the Cybermorg faction is actually an invention of the IT Department, Brainy Bot, the College's resident robot. It preaches a platform of modernisation, AI-centric learning and token usage maximisation. 
 
