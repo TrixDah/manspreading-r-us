@@ -2,7 +2,7 @@
 title: "Breaking News: Phone Massacre In Library Leaves At Least 20 Phones Snatched"
 section: School Events
 exclusive: false
-front_page: lead
+front_page: side
 date: 2026-11-11
 author: Lead Columnist
 summary: "Manspreaders is receiving reports that a mass phone-snatchening is
