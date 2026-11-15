@@ -5,10 +5,11 @@ exclusive: true
 front_page: side
 date: 2026-11-11
 author: Reginald "Rockin" Roberts
-summary: Ahead of the anticipated release of Rockstar Games' 'GTA VI', schools
-  are anticipating an all time low attendance immediatly following the release.
-standfirst: The game has been heavily anticipated following mutiple delays, and
-  the fact it is the first GTA game, since GTA V released in 2013.
+summary: Ahead of the highly anticipated release of Rockstar Games’ *GTA VI*,
+  schools are anticipating an all-time low in attendance immediately following
+  its launch.
+standfirst: The game has been highly anticipated following multiple delays, and
+  the fact that it is the first GTA game since GTA V was released in 2013.
 read_time: 3 min read
 image: /images/Sick Day Meets GTA VI.png
 image_caption: Students and even employers nation-wide are scheming ahead of
@@ -17,19 +18,18 @@ image_fit: false
 ---
 # Grand Theft Attendance: The Ultimate Sickie
 
-Ahead of the heavily anticipated release of GTA VI, schools across the country are preparing for what some are calling, "The biggest sickie to date."
+Ahead of the highly anticipated release of GTA VI, schools across the country are preparing for what some are calling "the biggest sickie to date".
 
-After a 13 year wait, GTA fans young and old are finally getting the new installment, after theories it would never release, and after several long delays. Ultimately, the day is almost here, November 19th marking the return of the franchise.
+After a 13-year wait, GTA fans, young and old, are finally getting the new instalment, following theories that it would never be released and several lengthy delays. Ultimately, the day is almost here, with November 19 marking the return of the franchise.
 
-But wait, November 19th is a Wednesday? So it is, which has led many to assume students who have pre-ordered the game for release day will do anything in their power to stay home and play on day one.
+But wait, November 19 is a Wednesday? So it is, which has led many to assume that students who have pre-ordered the game will do anything in their power to stay home and play on launch day.
 
-Principals in schools across Australia have already sent warnings and alerts to parents, alerting them that their kids 'little stomach bug' might be a ruse just to skip school.
+Principals at schools across Australia have already sent warnings and alerts to parents, informing them that their kids' "little stomach bug" might just be a ruse to skip school.
 
-Depsite this, many principals and staff are still anticpaiting and preparing record low attendances for that Wednesday, and potentially the Tuseday and Friday afterwards even.
+Despite this, many principals and staff are still anticipating and preparing for record-low attendance that Wednesday, and potentially the Tuesday and Friday afterwards, too.
 
-One Principal who I spoke too had this to say.
+One principal I spoke to had this to say:
 
-> "This could end up being the biggest sickie to date across our country. Not just kids either, you know. I've got some staff coming to me already claiming they feel something 'coming on'.
+> "This could end up being the biggest sickie to date across our country. Not just kids, either. You know, I've got some staff coming to me already claiming they feel something 'coming on'."
 
-We don't really know what to expect come next Wednesday, but you can catch all breaking stories here, at Mentone Manspreaders: Knowledge, that spreads.
-
+We don't really know what to expect come next Wednesday, but you can catch all the breaking stories here at Mentone Manspreaders: Knowledge that spreads.
